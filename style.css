@@ -1,0 +1,79 @@
+:root {
+  --clr-primary-300: hsl(193, 38%, 86%);
+  --clr-primary-400: hsl(150, 100%, 66%);
+
+  --clr-neutral-500: hsl(218, 23%, 16%);
+  --clr-neutral-400: hsl(217, 19%, 24%);
+  --clr-neutral-300: hsl(217, 19%, 38%);
+
+  --ff-primary: "Manrope", sans-serif;
+
+  --fs-body: 1.75rem;
+  --fs-small: 0.8rem;
+}
+
+body {
+  background-color: var(--clr-neutral-500);
+  font-family: var(--ff-primary);
+  margin: 10rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--clr-neutral-400);
+  padding: clamp(1rem, 2vw, 2rem);
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.header {
+  color: var(--clr-primary-400);
+  font-size: var(--fs-small);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.quote {
+  color: var(--clr-primary-300);
+  font-size: var(--fs-body);
+  width: 25ch;
+  text-align: center;
+}
+
+@media (max-width: 31.25em) {
+  .quote {
+    font-size: 1.4rem;
+  }
+}
+
+.img {
+  margin-block: 1rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: -10%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: var(--clr-primary-400);
+  border: 0;
+  background-image: url(images/icon-dice.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 1px 1px 10px var(--clr-primary-400);
+}
